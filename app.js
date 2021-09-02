@@ -40,7 +40,8 @@ const DisplayBooks = (data) =>{
     if(data.docs.length === 0){
    cheekName("block")
    box.textContent =""
-   totalBooks.innerText =""
+   cheekTotal(docs.length,data.numFound)
+  
 
   }
   else{
