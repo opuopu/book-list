@@ -1,19 +1,20 @@
 //  global variable
 const totalBooks = document.getElementById("all-books")
 const box = document.getElementById("box")
+
+
 // handelling error function
 const cheekTotal = (length,numFounds) =>{
   totalBooks.innerText =`showing ${length} results of ${numFounds}`
 }
-
 const error = (display) =>{
     document.getElementById("error").style.display = display
 }
 const cheekName = (displayName) =>{
   document.getElementById("cheekInput").style.display = displayName
 }
-error("none")
-cheekName("none")
+
+
 
 //  onlick function
 const search = () =>{
@@ -54,7 +55,7 @@ const DisplayBooks = (data) =>{
     div.innerHTML =` 
     <div class="card h-100" style="box-shadow:0 5px 10px gray;">
     <div>
-    <img height="300px" width="100px"   src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top" alt="sorry image not found ">
+    <img  src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top" alt="sorry image not found ">
     </div>
     <div class="card-body">
       <h5 class="card-title text-center">${books.title ? books.title: "cant find" }</h5>
