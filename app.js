@@ -22,7 +22,7 @@ error("block")
 else{
   cheekName("none")
 error("none")
-const url = `http://openlibrary.org/search.json?q=${fieldValue}`
+const url = `https://openlibrary.org/search.json?q=${fieldValue}`
 fetch(url)
 .then(res => res.json())
 .then( data => DisplayBooks(data))
@@ -48,7 +48,7 @@ const DisplayBooks = (data) =>{
     div.classList.add("col")
     div.innerHTML =` 
     <div class="card h-100" style="box-shadow:0 5px 10px gray;">
-    <img height="300px" width="100px"   src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top" alt="sorry image not found ">
+    <img height="300px" width="100px"   src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top " alt="sorry image not found ">
     <div class="card-body">
       <h5 class="card-title">${books.title ? books.title: "cant find" }</h5>
       <p class="card-text fw-bold">authors name:<span class ="text-info">${books.author_name ? books.author_name[0]:"sorry not find"}</span></p>
